@@ -1,5 +1,3 @@
-word = "abcdefg"
-lis = ["cd", "nnonoo"]
-
-if word[2:5] in lis:
-    print("yes")
+for i in range(10,1, -1):
+    print(i)
+    
