@@ -1,3 +1,3 @@
-for i in range(10,1, -1):
-    print(i)
-    
+a = 1
+b = 2
+c = min(a, b)
