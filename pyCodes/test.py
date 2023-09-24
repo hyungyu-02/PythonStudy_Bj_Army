@@ -1,3 +1,5 @@
-a = 1
-b = 2
-c = min(a, b)
+for i in range(10):
+    print(i)
+    if i == 5:
+        print("now i is 5")
+        i = 3
