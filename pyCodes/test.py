@@ -1,2 +1,2 @@
-lst = int(input().split())
-print(lst)
+source = list(map(int, input().split()))
+print(source)
