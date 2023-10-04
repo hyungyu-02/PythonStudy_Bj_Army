@@ -1,24 +1,18 @@
+#knapsack algorithm
+import sys
 n, k = map(int, input().split())
-items = []
+items = [[0,0]]
+knapsack = [[0 for _ in range(k+1)] for _ in range(n+1)]
+
 for _ in range(n):
-    w, v = map(int, input().split())
-    items.append((w,v))
-
-maxVal = 0
-bag = []
-
-def bt(W, V, idx):
-    if idx == n:
-        if maxVal < V:
-            maxVal = V
-        return
-    for i in range(idx, n):
-        if W + items[i][0] <= k:
-            bag.append(items[i])
-            bt(W + items[i][0], V + items[i][1], idx+1)
-            bag.pop()
+    items.append(list(map(int, input().split())))
+    
+for i in range(1, n+1):
+    weight = items[i][0]
+    value = items[i][1]
+    for j in range(1, k+1):
+        if j < weight:
+            knapsack[i][j] = knapsack[i-1][j]
         else:
-            if maxVal < V:
-                maxVal = V
-bt(0,0,0)
-print(maxVal)
+            knapsack[i][j] = max(value + knapsack[i-1][j-weight], knapsack[i-1][j])
+print(knapsack[n][k])
