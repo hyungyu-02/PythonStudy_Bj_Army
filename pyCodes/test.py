@@ -1,6 +1,3 @@
-for i in range(4, 20):
-    for j in range(2, int(i**0.5)+1):
-        if i % j == 0:
-            break
-    else:
-        print(i)
+line = [200,100,30]
+for i in range(min(line),0,-1):
+    print(i)
