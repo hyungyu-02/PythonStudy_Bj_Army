@@ -1,3 +1,4 @@
+#스택
 import sys
 
 k = int(input())
