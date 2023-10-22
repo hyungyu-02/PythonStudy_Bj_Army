@@ -1,3 +1,4 @@
+#Dynamic Programming
 n = int(input())
 dp = [[0]*n for _ in range(10)]
 for i in range(1,10):
