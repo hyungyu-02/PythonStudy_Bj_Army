@@ -4,7 +4,6 @@ input = sys.stdin.readline
 
 n = int(input())
 A = list(map(int, input().split()))
-
 dp = [1]*n
 
 for i in range(1,n):
