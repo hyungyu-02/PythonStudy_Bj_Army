@@ -1,3 +1,4 @@
+#완전탐색(BruteForce)
 n, m = map(int, input().split())
 
 result = []
