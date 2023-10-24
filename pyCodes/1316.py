@@ -1,3 +1,4 @@
+#String
 n = int(input())
 gWords = n
 
