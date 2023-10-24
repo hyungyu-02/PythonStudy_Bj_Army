@@ -1,4 +1,4 @@
-#knapsack algorithm
+#knapsack Algorithm
 import sys
 n, k = map(int, input().split())
 items = [[0,0]]
