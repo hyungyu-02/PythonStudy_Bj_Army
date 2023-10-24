@@ -1,3 +1,4 @@
+#String
 words = input().upper()
 uniq_words = list(set(words))
 
