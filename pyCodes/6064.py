@@ -1,4 +1,4 @@
-#bruteforcing Algorithm, math
+#bruteforce Algorithm, math
 import sys
 input = sys.stdin.readline
 
