@@ -1,50 +1,34 @@
-#Minimun Spanning Tree(MST), Kruskal Algorithm
+#Minimun Spanning Tree(MST), Kruskal Algorithm, Union-Find
 import sys
 input = sys.stdin.readline
 V, E = map(int, input().split())
+minCost = 0
 
-val = [list(map(int, input().split())) for _ in range(E)]
-val.sort(key=lambda x:x[2])
+eNc = [list(map(int, input().split())) for _ in range(E)]
+eNc.sort(key=lambda x: x[2])
 
-totalVal = 0
+parent = [i for i in range(V+1)]
 
-def check():
-    global num
-    hits = 1
-    visited = [False]*(V+1)
-    
-    q = []
-    q.append(val[0][0])
-    visited[val[0][0]] = True
-    while q:
-        cur = q.pop(0)
-        for i in range(num):
-            if val[i][0] == cur and not visited[val[i][1]]:
-                q.append(val[i][1])
-                visited[val[i][1]] = True
-                hits += 1
-            elif val[i][1] == cur and not visited[val[i][0]]:
-                q.append(val[i][0])
-                visited[val[i][0]] = True
-                hits += 1
-    
-    if hits == V:
-        return True
+def getParent(v):
+    if v == parent[v]:
+        return v
+    parent[v] = getParent(parent[v])
+    return parent[v]
+
+def unionParent(v1, v2):
+    v1 = getParent(v1)
+    v2 = getParent(v2)
+    if v1 > v2:
+        parent[v1] = v2
     else:
-        return False               
-
-def linking():
-    global totalVal, num
-    if num >= E:
-        return
-    totalVal += val[num][2]
-    num += 1
-    if check():
-        return
-    else:
-        linking()
+        parent[v2] = v1
     return
 
-num = 0
-linking()
-print(totalVal)
+def isSameParent(v1, v2):
+    return getParent(v1) == getParent(v2)
+
+for v1, v2, c in eNc:
+    if not isSameParent(v1, v2):
+        unionParent(v1, v2)
+        minCost += c
+print(minCost)
