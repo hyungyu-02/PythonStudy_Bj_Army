@@ -1,6 +1,5 @@
 #백트래킹
 n, m = map(int, input().split())
-
 grp = []
 
 def bt():
