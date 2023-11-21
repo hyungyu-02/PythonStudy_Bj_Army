@@ -15,5 +15,5 @@ def bt():
             grp.append(i)
             bt()
             grp.pop()
-            
+
 bt()

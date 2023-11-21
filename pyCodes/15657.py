@@ -3,7 +3,6 @@ n, m = map(int, input().split())
 
 source = list(map(int, input().split()))
 source.sort()
-
 grp = []
 
 def bt():

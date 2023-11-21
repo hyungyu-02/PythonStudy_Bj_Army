@@ -15,5 +15,5 @@ def bt(idx):
             grp.append(source[i])
             bt(i)
             grp.pop()
-            
+
 bt(0)

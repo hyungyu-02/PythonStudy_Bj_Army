@@ -12,5 +12,5 @@ def bt(recent):
             grp.append(i)
             bt(i)
             grp.pop()
-            
+
 bt(0)
