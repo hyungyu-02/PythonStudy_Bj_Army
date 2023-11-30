@@ -1,4 +1,4 @@
-N = 4
-board = [[0] for _ in range(N+1)]
-board[0] += [0 for _ in range(N)]
-print(board)
+arr = [1,2,3,4,5]
+arr.pop(0)
+arr.pop(-1)
+print(arr)
