@@ -1,3 +1,4 @@
+#Binary Search
 n = int(input())
 A = set(map(int, input().split()))
 m = int(input())
