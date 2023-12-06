@@ -1,3 +1,4 @@
+#bruteforce Algorithm
 n = int(input())
 inf = []
 score = [1]*n
