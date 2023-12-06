@@ -1,3 +1,4 @@
+#Stack
 while True:
     sen = input()
     if sen[0] == '.':
