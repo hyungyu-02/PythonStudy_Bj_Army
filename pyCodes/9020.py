@@ -1,3 +1,4 @@
+#Math, Prime Number
 prime_num = [2, 3]
 for i in range(5, 9998):
     for j in range(2, int(i**0.5)+1):
