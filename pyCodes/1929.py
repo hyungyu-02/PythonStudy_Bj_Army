@@ -1,3 +1,4 @@
+#math, prime number
 m, n = map(int, input().split())
 
 if m == 1 and n >= 2:
