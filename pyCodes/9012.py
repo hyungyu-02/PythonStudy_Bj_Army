@@ -1,3 +1,4 @@
+#stack
 t = int(input())
 score = 0
 
