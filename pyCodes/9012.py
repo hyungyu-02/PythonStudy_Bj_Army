@@ -1,7 +1,6 @@
-#stack
+#자료구조, stack
 t = int(input())
 score = 0
-
 for i in range(t):
     score = 0
     vps = input()
