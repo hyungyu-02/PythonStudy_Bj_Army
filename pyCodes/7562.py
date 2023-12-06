@@ -1,3 +1,4 @@
+#그래프 탐색(bfs), deque
 from collections import deque
 import sys
 input = sys.stdin.readline
