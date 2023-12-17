@@ -1,4 +1,4 @@
-#Fibonacci, Math
+#Fibonacci, Matrix
 dev = 1000000007
 n = int(input())
 def power(A, n):
