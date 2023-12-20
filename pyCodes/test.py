@@ -1,3 +1,2 @@
-lst = [[(2,3), (1,43)], [(1,5), (4,8)]]
-lst[0].sort()
-print(lst)
+visited = [[1 for _ in range(5)] for _ in range(5)]
+print(visited)
