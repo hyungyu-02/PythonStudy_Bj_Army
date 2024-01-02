@@ -1,3 +1,3 @@
-INF = int(1e9)
-if INF + 99999 > INF:
-    print("true")
+arr = ['a', 'b']
+arr2 = arr + list('c')
+print(arr2)
